@@ -5,7 +5,7 @@ $(document).ready(function(){
         $.ajax('/hello', {
             method: 'GET',
             success: function(response){
-                $('body').append(response);
+                $('body').append('<div>' + response + '</div>');
             }
         });
     })
