@@ -1,3 +1,40 @@
+body {
+    background: #64e1ef;
+    text-align: center;
+}
+
+#mainControls {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
 div {
-    margin: 10px;
+    margin: 10px auto;
+    padding: 10px;
+    background: #c5f2f7;
+    width: 25%;
+    text-align: center;
+    border-radius: 10px;
+    border: double 2px blue;
+}
+
+button {
+    margin-top: 5px;
+}
+
+input {
+    width: 100%;
+    text-align: center;
+}
+#outputContainer {
+    margin: 20 auto;
+    width: 70%;
+    text-align: center;
+    background: #3a1c72;
+}
+
+#output {
+    width: 70%;
 }

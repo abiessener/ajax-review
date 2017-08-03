@@ -10,22 +10,24 @@
 <body>
     <h1>AJAX review</h1>
     <hr>
-    <div>
-        <button id="helloButton">Hello!</button>
+    <div id="mainControls">
+        <div>
+            <button id="helloButton">Hello!</button>
+            <button id="pumpUpButton">Get Jacked!</button>
+        </div>
+        <div>
+            <input id="greetingInput" type="text" placeholder="Enter New Greeting">
+            <button id="greetingSendButton">Update Greeting</button>
+        </div>
+        <div>
+            <input id="greetingAdd" type="text" placeholder="Add to Greeting">
+            <button id="greetingAddButton">Add to Greeting</button>
+        </div>
     </div>
-    <div>
-        <input id="greetingInput" type="text" placeholder="Enter New Greeting">
-        <button id="greetingSendButton">Update Greeting</button>
+    
+    <div id="outputContainer">
+        <div id="output"></div>
     </div>
-    <div>
-        <button id="pumpUpButton">Get Jacked!</button>
-    </div>
-    <div>
-        <input id="greetingAdd" type="text" placeholder="Add to Greeting">
-        <button id="greetingAddButton">Add to Greeting</button>
-    </div>
-    <div id="output"></div>
-
 </body>
 
 </html>
