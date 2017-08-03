@@ -28,6 +28,21 @@ app.post('/hello', function(req,res){
     }
 });
 
+app.post('/add-to-greeting', function(req,res){
+    var stringToAdd = req.body.stringToAdd;
+    // console.log('data type:', typeof(req.body.newGreeting));
+    // console.log('newGreeting:', req.body.newGreeting);
+    
+    if (stringToAdd === ''){
+        res.sendStatus(400);
+    } else if (typeof(stringToAdd) != 'string') {
+        res.sendStatus(401);
+    } else {
+        greeting += stringToAdd;
+        res.sendStatus(201);
+    }
+});
+
 app.post('/pumpup', function(req,res){
     greeting += '!';
     res.sendStatus(201);

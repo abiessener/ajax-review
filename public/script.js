@@ -36,6 +36,24 @@ function updateGreeting(){
     });
 }
 
+function addToGreeting(){
+    var stringToAdd = $('#greetingAdd').val();
+    $('#greetingAdd').val('');
+    $.ajax('/add-to-greeting', {
+        method: 'POST',
+        data: { stringToAdd: stringToAdd },
+        success: function(response){
+            console.log('addToGreeting success:', stringToAdd);
+            appendHello();
+        },
+        statusCode: {
+            400: function(){
+                window.alert('no ghost greetings, please!');
+            }
+        }
+    });
+}
+
 
 $(document).ready(function () {
     $('h1').css('font-size', '2em');
@@ -45,11 +63,16 @@ $(document).ready(function () {
     $('#pumpUpButton').on('click', getJacked);
 
     $('#greetingSendButton').on('click', updateGreeting);
-
     $('#greetingInput').keypress(function(key){
         if (key.which == 13){
             updateGreeting();
         }
     });
 
+    $('#greetingAddButton').on('click', addToGreeting);
+    $('#greetingAdd').keypress(function(key){
+        if (key.which == 13){
+            addToGreeting();
+        }
+    });
 });
