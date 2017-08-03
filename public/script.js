@@ -2,7 +2,7 @@ function appendHello() {
     $.ajax('/hello', {
         method: 'GET',
         success: function (response) {
-            $('body').append('<div>' + response + '</div>');
+            $('#output').text(response);
         }
     });
 }
